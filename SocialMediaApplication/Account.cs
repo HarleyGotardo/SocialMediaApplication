@@ -10,7 +10,11 @@ namespace SocialMediaApplicationFacebook
     {
         public string Username { get; set; }
         public string Password { private get; set; }
-        public string Email { get; set; }
-        public string PhoneNumber { get; set; }
+        public Account(string username, string password)
+        {
+            this.Username = username;
+            this.Password = password;
+        }
+        public abstract void Post();
     }
 }

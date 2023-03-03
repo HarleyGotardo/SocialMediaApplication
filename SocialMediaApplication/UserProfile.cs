@@ -11,14 +11,13 @@ namespace SocialMediaApplicationFacebook
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Age { get; set; }
-        public DateOnly ProfileBirthDate { get; private set; }
+        public string ProfileBirthDate { get; private set; }
         public string Status { get; set; }
         public string Bio { get; set; }
         public string Address { get; set; }
         public int NumberOfFriends { get; set; }
-        public string CommentContent { get; set; }
 
-        public UserProfile(string username, string password, string email, string phoneNumber, string firstName, string lastName, int age, DateOnly ProfileBirthDate, string status, int numberOfFriends, string commentContent)
+        public UserProfile(string username, string password, string email, string phoneNumber, string firstName, string lastName, int age, string ProfileBirthDate, string status, int numberOfFriends) : base(username, password)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
@@ -26,13 +25,18 @@ namespace SocialMediaApplicationFacebook
             this.ProfileBirthDate = ProfileBirthDate;
             this.Status = status;
             this.NumberOfFriends = numberOfFriends;
-            this.CommentContent = commentContent;
         }
 
-        public static string Comment(UserProfile p, string content)
+        public override void Post()
         {
-            UserProfile.CommentContent = content;
-            return content;
+            Console.WriteLine("What's on your Mind?: ");
+            string content = Console.ReadLine();
+            Console.WriteLine(this.FirstName + " posted: " + content);
+        }
+
+        public override string ToString()
+        {
+            return "\nName: " + this.FirstName + " " + this.LastName;
         }
     }
 }
