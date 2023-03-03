@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SocialMediaApplication
+namespace SocialMediaApplicationFacebook
 {
     public abstract class Account
     {
@@ -12,14 +12,5 @@ namespace SocialMediaApplication
         public string Password { private get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
-        
-        public Account(string username, string password, string email, string phoneNumber)
-        {
-            this.Username = username;
-            this.Password = password;
-            this.Email = email;
-            this.PhoneNumber = phoneNumber;
-        }
     }
-    //test pull in github
 }

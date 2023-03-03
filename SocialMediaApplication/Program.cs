@@ -1,2 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using SocialMediaApplicationFacebook;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        //UserProfile FacebookUser1 = new UserProfile();
+    }
+}
