@@ -11,12 +11,14 @@ namespace SocialMediaApplicationFacebook
         public UserProfile Sender { get; private set; }
         public string MessageContent { get; private set; }
         public GroupChat GroupChat { get; private set; }
-
-        public SendGroupChatMessage(string groupChatName, UserProfile[] gcMembers, string dateAndTimeOfTheMessage, PostMessageType messageType, UserProfile sender, string messageContent, GroupChat groupChat) : base(groupChatName, gcMembers, dateAndTimeOfTheMessage, messageType)
+        public PostMessageType MessageType { get; set; }
+        public string DateAndTimeOfTheMessage { get; private set; }
+        public SendGroupChatMessage(string groupChatName, UserProfile[] gcMembers, int totalMembers, UserProfile sender, string messageContent, GroupChat groupChat, PostMessageType message, string dateAndTimeOfTheMessage) : base(groupChatName, gcMembers, totalMembers)
         {
-            Sender = sender;
-            MessageContent = messageContent;
-            GroupChat = groupChat;
+            this.Sender = sender;
+            this.MessageContent = messageContent;
+            this.GroupChat = groupChat;
+            this.DateAndTimeOfTheMessage = dateAndTimeOfTheMessage;
         }
 
         public override string ToString()

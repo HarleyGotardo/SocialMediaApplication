@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace SocialMediaApplicationFacebook
 {
-    public class GroupChat : Message //Group chat, just like in messenger
+    public class GroupChat //Group chat, just like in messenger
     {
         public string GroupChatName { get; set; }
         public UserProfile[] GroupChatMembers { get; set; }
-
-        public GroupChat(string groupChatName, UserProfile[] gcMembers, string dateAndTimeOfTheMessage, PostMessageType messageType) : base(dateAndTimeOfTheMessage, messageType) 
+        public int TotalNumberOfMembers { get; set; }
+        public GroupChat(string groupChatName, UserProfile[] gcMembers, int totalMembers)
         { 
             this.GroupChatName = groupChatName;
             this.GroupChatMembers = gcMembers;
+            this.TotalNumberOfMembers = totalMembers;
         }
         public override string ToString()
         {
