@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace SocialMediaApplicationFacebook
 {
-    public class SendGroupChatMessage : Message
+    public class SendGroupChatMessage : GroupChat
     {
         public UserProfile Sender { get; private set; }
         public string MessageContent { get; private set; }
         public GroupChat GroupChat { get; private set; }
 
-        public SendGroupChatMessage(string dateAndTimeOfTheMessage, PostMessageType messageType, UserProfile sender, string messageContent, GroupChat groupChat) : base(dateAndTimeOfTheMessage, messageType)
+        public SendGroupChatMessage(string groupChatName, UserProfile[] gcMembers, string dateAndTimeOfTheMessage, PostMessageType messageType, UserProfile sender, string messageContent, GroupChat groupChat) : base(groupChatName, gcMembers, dateAndTimeOfTheMessage, messageType)
         {
             Sender = sender;
             MessageContent = messageContent;
