@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SocialMediaApplicationFacebook
+{
+    public enum PageCategory
+    {
+        Business,
+        Entertainment,
+        Music,
+        Education,
+        News,
+        Art,
+
+    }
+}

@@ -33,19 +33,56 @@ namespace SocialMediaApplicationFacebook
             this.ProfileStatus = profileStatus;
         }
 
-        public PrivateMessage PrivateMessage(PrivateMessage p)
+        public PrivateMessage PrivateMessage(PrivateMessage pm)
         {
-            return p;
+            return pm;
         }
 
-        public GroupMessage GroupMessage(GroupMessage p) 
+        public GroupMessage GroupMessage(Group g, GroupMessage gm) 
+        {
+            for(int i=0; i<g.Members.Length; i++)
+            {
+                if (this.Username != g.Members[i].Username)
+                    Console.WriteLine("Can't Message this group, you're not a member.");
+                else 
+                    return gm;
+            }
+            return gm;
+        }
+
+        public SendGroupChatMessage MessageGroupChat(GroupChat g, SendGroupChatMessage s)
+        {
+            for (int i = 0; i < g.GroupChatMembers.Length; i++)
+            {
+                if (this.Username != g.GroupChatMembers[i].Username)
+                    Console.WriteLine("Can't Message this group, you're not a member.");
+                else
+                    return s;
+            }
+            return s; 
+        }
+
+        public UserProfilePost PostSomething(UserProfilePost post) 
         { 
-            return p; 
+            return post; 
+        }
+
+        public GroupPost PostInGroup(GroupPost gp)
+        {
+            for (int i = 0; i < gp.Members.Length; i++)
+            {
+                if (this.Username != gp.Members[i].Username)
+                    Console.WriteLine("Can't post in this group, you're not a member.");
+                else
+                    return gp;
+            }
+            return gp;
         }
 
         public override string ToString()
         {
-            return "Name: " + this.FirstName + " " + this.LastName;
+            return "Name: " + this.FirstName + " " + this.LastName + "\n"
+                + "Profile Status: " + this.ProfileStatus;
         }
     }
 }
