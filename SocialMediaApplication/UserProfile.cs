@@ -27,13 +27,6 @@ namespace SocialMediaApplicationFacebook
             this.NumberOfFriends = numberOfFriends;
         }
 
-        public override void Post()
-        {
-            Console.WriteLine("What's on your Mind?: ");
-            string content = Console.ReadLine();
-            Console.WriteLine(this.FirstName + " posted: " + content);
-        }
-
         public override string ToString()
         {
             return "Name: " + this.FirstName + " " + this.LastName;
