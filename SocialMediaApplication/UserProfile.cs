@@ -36,7 +36,7 @@ namespace SocialMediaApplicationFacebook
 
         public override string ToString()
         {
-            return "\nName: " + this.FirstName + " " + this.LastName;
+            return "Name: " + this.FirstName + " " + this.LastName;
         }
     }
 }

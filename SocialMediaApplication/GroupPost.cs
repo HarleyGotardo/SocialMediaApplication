@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace SocialMediaApplicationFacebook
 {
-    public class GroupPost
+    public class GroupPost : Group
     {
         public Group Group { get; set; }
         public string PostContent { get; set; }
         public string PostType { get; set; }
         public string PostTitle { get; set; }
 
-        public GroupPost(Group group, string postContent, string postType, string postTitle)
+        public GroupPost(string groupName, string description, int totalNumberOfMembers, UserProfile owner, Group group, string postContent, string postType, string postTitle) : base(groupName, description, totalNumberOfMembers, owner)
         {
             this.Group = group;
             this.PostContent = postContent;
