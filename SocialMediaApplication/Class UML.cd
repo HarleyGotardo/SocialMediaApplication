@@ -24,7 +24,7 @@
   <Class Name="SocialMediaApplicationFacebook.GroupMessage" Collapsed="true">
     <Position X="20.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GroupMessage.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -38,7 +38,7 @@
   <Class Name="SocialMediaApplicationFacebook.Message" Collapsed="true">
     <Position X="19.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAABAIAEAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Message.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -59,7 +59,7 @@
   <Class Name="SocialMediaApplicationFacebook.PrivateMessage" Collapsed="true">
     <Position X="18" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABAAAAAAAEAAAAAAAAAAAEAAAAAAAAAAAIAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PrivateMessage.cs</FileName>
     </TypeIdentifier>
   </Class>

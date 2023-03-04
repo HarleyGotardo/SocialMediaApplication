@@ -8,13 +8,9 @@ namespace SocialMediaApplicationFacebook
 {
     public class GroupMessage : Message //Messages in group
     {
-        public UserProfile Sender { get; set; }
         public Group ReceiverGroup { get; set; }
-        public string MessageContent { get; private set; }
-        public GroupMessage(UserProfile sender, Group receiverGroup, string MessageContent, string dateAndTimeOfTheMessage, PostMessageType messageType) : base(dateAndTimeOfTheMessage, messageType)
+        public GroupMessage(UserProfile sender, string messageContent, Group receiverGroup, string dateAndTimeOfTheMessage, PostMessageType messageType) : base(sender, messageContent, dateAndTimeOfTheMessage, messageType)
         {
-            this.MessageContent = MessageContent;
-            this.Sender = sender;
             this.ReceiverGroup = receiverGroup;
         }
 

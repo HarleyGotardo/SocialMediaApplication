@@ -20,7 +20,7 @@ public class Program
         GroupPost grp1Post = new GroupPost("Secret", "Nothing", grp1TotalNumberOfMembers, FacebookUser1, grp1Members, grp1, "Hello", PostMessageType.Text, "Greetings");
         Console.WriteLine(grp1Post);
 
-        PrivateMessage pm1 = new PrivateMessage(FacebookUser2, FacebookUser1, "Hello Eren!", "Dec. 01, 2022, 12:00am", PostMessageType.Text);
+        PrivateMessage pm1 = new PrivateMessage(FacebookUser2, "Hi!", FacebookUser1, "September 07, 2022", PostMessageType.Text);
         Console.WriteLine(pm1);
 
         UserProfile Sam = new UserProfile("HEHE", "12345", "Juan", "Dela Cruz", "juandc@gmail.com", 10, "February 02, 2013", "Single", "Im a kid", "Cebu", 200, ProfileStatus.Sleeping);
@@ -30,6 +30,6 @@ public class Program
         UserProfile[] FamilyMembersGC = { Sam, Mel };
         GroupChat WaRaGud = new GroupChat("Family", FamilyMembersGC, FamilyMembersGC.Length);
 
-        SendGroupChatMessage GcMsg1 = new SendGroupChatMessage(WaRaGud.GroupChatName, FamilyMembersGC, FamilyMembersGC.Length, Sam, )
+        SendGroupChatMessage GcMsg1 = new SendGroupChatMessage(WaRaGud.GroupChatName, FamilyMembersGC, FamilyMembersGC.Length, Sam, "Hello Fam!", WaRaGud, PostMessageType.Text, "September 05, 2005");
     }
 }
