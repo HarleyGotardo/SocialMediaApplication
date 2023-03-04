@@ -1,70 +1,105 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="SocialMediaApplicationFacebook.Message" Collapsed="true">
-    <Position X="12.25" Y="1" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Message.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="SocialMediaApplicationFacebook.Account" Collapsed="true">
-    <Position X="8" Y="1" Width="1.5" />
+    <Position X="10.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>Account.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SocialMediaApplicationFacebook.Group" Collapsed="true">
-    <Position X="11" Y="4" Width="1.5" />
+    <Position X="16.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAACAAAAgAAAEAAAAAAAACAAAAAAAAAAEIAAAAAE=</HashCode>
       <FileName>Group.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SocialMediaApplicationFacebook.GroupPost" Collapsed="true">
-    <Position X="11" Y="5.25" Width="1.5" />
+  <Class Name="SocialMediaApplicationFacebook.GroupChat" Collapsed="true">
+    <Position X="13.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAEAEAAAAAAAgAAAAAAAAAAAAAAAAE=</HashCode>
-      <FileName>GroupPost.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SocialMediaApplicationFacebook.UserProfile" Collapsed="true">
-    <Position X="8" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAMAEAkACAAAAAECEABAAAAAAAAAAACAAAAAAIABAg=</HashCode>
-      <FileName>UserProfile.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SocialMediaApplicationFacebook.PrivateMessage" Collapsed="true">
-    <Position X="11" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAABAAAAAAAEAAAAAAAAAAAEAAAAAAAAAAAIAAA=</HashCode>
-      <FileName>PrivateMessage.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAACAAAAAAAAAAACAAA=</HashCode>
+      <FileName>GroupChat.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SocialMediaApplicationFacebook.GroupMessage" Collapsed="true">
-    <Position X="13.25" Y="2.25" Width="1.5" />
+    <Position X="17.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAABAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>GroupMessage.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="SocialMediaApplicationFacebook.GroupPost" Collapsed="true">
+    <Position X="16.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAEAEAAAAAAAgAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>GroupPost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocialMediaApplicationFacebook.Message" Collapsed="true">
+    <Position X="14.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Message.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocialMediaApplicationFacebook.Page" Collapsed="true">
+    <Position X="13.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAARAAAAAAEEAAACASAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Page.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocialMediaApplicationFacebook.PagePost" Collapsed="true">
+    <Position X="13.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEgEAAAAAAAgAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>PagePost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocialMediaApplicationFacebook.PrivateMessage" Collapsed="true">
+    <Position X="15.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAEAAAAAAAAAAAEAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>PrivateMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocialMediaApplicationFacebook.SendGroupChatMessage" Collapsed="true">
+    <Position X="11" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAEAAAAIAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>SendGroupChatMessage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SocialMediaApplicationFacebook.UserProfile" Collapsed="true">
+    <Position X="10.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMAEAkACAAAAAECEABAAAAAAAAAQACAAAAAAIAFAg=</HashCode>
+      <FileName>UserProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="SocialMediaApplicationFacebook.UserProfilePost" Collapsed="true">
-    <Position X="8" Y="3.75" Width="1.5" />
+    <Position X="10.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAgAABAAAAAAAAAAAAAE=</HashCode>
       <FileName>UserProfilePost.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Enum Name="SocialMediaApplicationFacebook.PostMessageType">
-    <Position X="15.75" Y="1" Width="1.5" />
+  <Enum Name="SocialMediaApplicationFacebook.PageCategory" Collapsed="true">
+    <Position X="20.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEABAEAAEAAAAAAAAAAAAAAAAAAAIAAAAAgAAAAAAA=</HashCode>
+      <FileName>PageCategory.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SocialMediaApplicationFacebook.PostMessageType" Collapsed="true">
+    <Position X="22" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAACAAAAAAACAAAAAAAAAAAAAACAAAAAg=</HashCode>
       <FileName>PostMessageType.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="SocialMediaApplicationFacebook.ProfileStatus">
-    <Position X="17.5" Y="1" Width="1.5" />
+  <Enum Name="SocialMediaApplicationFacebook.ProfileStatus" Collapsed="true">
+    <Position X="20.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAgABAAAAAAIAAgAEAAAAAAAAAAAQAAIAYAACAA=</HashCode>
       <FileName>ProfileStatus.cs</FileName>
