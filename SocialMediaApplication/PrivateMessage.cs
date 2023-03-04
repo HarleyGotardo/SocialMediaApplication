@@ -11,7 +11,7 @@ namespace SocialMediaApplicationFacebook
         public UserProfile Sender { get; private set; }
         public UserProfile Receiver { get; set; }
 
-        public PrivateMessage(UserProfile receiver, UserProfile sender, string messageContent, string dateAndTimeOfTheMessage, string messageType) : base(sender, messageContent, dateAndTimeOfTheMessage, messageType)
+        public PrivateMessage(UserProfile receiver, UserProfile sender, string messageContent, string dateAndTimeOfTheMessage, PostMessageType messageType) : base(messageContent, dateAndTimeOfTheMessage, messageType)
         {
             this.Sender = sender;
             this.Receiver = receiver;

@@ -10,14 +10,13 @@ namespace SocialMediaApplicationFacebook
     {
         public string MessageContent { get; private set; }
         public string DateAndTimeOfTheMessage { get; private set; }
-        public string MessageType { get; private set; }
+        public PostMessageType MessageType { get; private set; }
 
-        public Message(string messageContent, string dateAndTimeOfTheMessage, string messageType) 
+        public Message(string messageContent, string dateAndTimeOfTheMessage, PostMessageType messageType) 
         { 
             this.MessageContent = messageContent;
             this.DateAndTimeOfTheMessage = dateAndTimeOfTheMessage;
             this.MessageType = messageType;
-        }
-        
+        }       
     }
 }

@@ -10,10 +10,10 @@ namespace SocialMediaApplicationFacebook
     {
         public Group Group { get; set; }
         public string PostContent { get; set; }
-        public string PostType { get; set; }
+        public PostMessageType PostType { get; set; }
         public string PostTitle { get; set; }
 
-        public GroupPost(string groupName, string description, int totalNumberOfMembers, UserProfile owner, Group group, string postContent, string postType, string postTitle) : base(groupName, description, totalNumberOfMembers, owner)
+        public GroupPost(string groupName, string description, int totalNumberOfMembers, UserProfile owner, UserProfile[] members, Group group, string postContent, PostMessageType postType, string postTitle) : base(groupName, description, totalNumberOfMembers, owner, members)
         {
             this.Group = group;
             this.PostContent = postContent;

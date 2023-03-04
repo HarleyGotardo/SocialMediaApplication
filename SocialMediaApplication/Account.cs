@@ -15,6 +15,5 @@ namespace SocialMediaApplicationFacebook
             this.Username = username;
             this.Password = password;
         }
-        public abstract void Post();
     }
 }
