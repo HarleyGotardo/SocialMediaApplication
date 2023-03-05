@@ -12,8 +12,8 @@ namespace SocialMediaApplicationFacebook
         public string Description { get; set; }
         public int TotalNumberOfMembers { get; set; }
         public UserProfile Owner { get; set; }
-        public UserProfile[] Members { get; set; }
-        public Group(string groupName, string description, int totalNumberOfMembers, UserProfile owner, UserProfile[] members)
+        public List<UserProfile> Members { get; set; }
+        public Group(string groupName, string description, int totalNumberOfMembers, UserProfile owner, List<UserProfile> members)
         {
             this.GroupName = groupName;
             this.Description = description;

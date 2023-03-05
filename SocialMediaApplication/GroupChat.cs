@@ -9,9 +9,9 @@ namespace SocialMediaApplicationFacebook
     public class GroupChat //Group chat, just like in messenger
     {
         public string GroupChatName { get; set; }
-        public UserProfile[] GroupChatMembers { get; set; }
+        public List<UserProfile> GroupChatMembers { get; set; }
         public int TotalNumberOfMembers { get; set; }
-        public GroupChat(string groupChatName, UserProfile[] gcMembers, int totalMembers)
+        public GroupChat(string groupChatName, List<UserProfile> gcMembers, int totalMembers)
         { 
             this.GroupChatName = groupChatName;
             this.GroupChatMembers = gcMembers;
