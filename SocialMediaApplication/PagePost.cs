@@ -6,27 +6,21 @@ using System.Threading.Tasks;
 
 namespace SocialMediaApplicationFacebook
 {
-    public class PagePost : Page
+    public class PagePost : Post
     {
-        public UserProfile Author { get; private set; }
-        public string PostTitle { get; set; }
-        public string PostContent { get; set; }
-        public PostMessageType PostType { get; set; }
-
-        public PagePost(string pageName, UserProfile admin, string about, string pageDescription, int numberOfFollowers, int numberOfLikes, UserProfile author, string postTitle, string postContent, PostMessageType postType) : base(pageName, admin, about, pageDescription, numberOfFollowers, numberOfLikes)
+        public PagePost Page { get; private set; }
+        public string DateTime { get; private set; }
+        public PagePost(PagePost page, string dateTime, PostMessageType postType, string title, string postContent, string description) : base(postType, title, postContent, description) 
         {
-            this.Author = author;
-            this.PostTitle = postTitle;
-            this.PostContent = postContent;
-            this.PostType = postType;
+            this.Page = page;
+            this.DateTime = dateTime;
         }
 
         public override string ToString()
         {
-            return "\nPage: " + this.PageName + "\n" 
+            return "\nPage: " + this.Page + "\n" 
                 + "PostType: " + this.PostType + "\n"
-                + "Author: " + this.Author + "\n"
-                + "Post Title: " + this.PostTitle + "\n"
+                + "Post Title: " + this.Title + "\n"
                 + "Post Content: " + this.PostContent + "\n";
         }
     }

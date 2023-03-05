@@ -17,7 +17,7 @@ public class Program
         Group grp1 = new Group("Secret", "This is a secret group", grp1TotalNumberOfMembers, FacebookUser1, grp1Members);
         Console.WriteLine(grp1);
 
-        GroupPost grp1Post = new GroupPost("Secret", "Nothing", grp1TotalNumberOfMembers, FacebookUser1, grp1Members, grp1, "Hello", PostMessageType.Text, "Greetings");
+        GroupPost grp1Post = new GroupPost(PostMessageType.Text, "Greetings", "Good Morning", "Just want to say good morning to everyone", FacebookUser2, grp1, "August 05, 2023");
         Console.WriteLine(grp1Post);
 
         PrivateMessage pm1 = new PrivateMessage(FacebookUser2, "Hi!", FacebookUser1, "September 07, 2022", PostMessageType.Text);

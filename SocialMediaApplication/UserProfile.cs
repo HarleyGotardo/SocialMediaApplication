@@ -42,10 +42,10 @@ namespace SocialMediaApplicationFacebook
         {
             for(int i=0; i<g.Members.Length; i++)
             {
-                if (this.Username != g.Members[i].Username)
-                    Console.WriteLine("Can't Message this group, you're not a member.");
-                else 
+                if (this.Username == g.Members[i].Username)
                     return gm;
+                else
+                    Console.WriteLine("Can't Message this group, you're not a member.");              
             }
             return gm;
         }
@@ -54,10 +54,10 @@ namespace SocialMediaApplicationFacebook
         {
             for (int i = 0; i < g.GroupChatMembers.Length; i++)
             {
-                if (this.Username != g.GroupChatMembers[i].Username)
-                    Console.WriteLine("Can't Message this group, you're not a member.");
-                else
+                if (this.Username == g.GroupChatMembers[i].Username)
                     return s;
+                else
+                    Console.WriteLine("Can't Message.You're not a member.");
             }
             return s; 
         }
@@ -67,14 +67,14 @@ namespace SocialMediaApplicationFacebook
             return post; 
         }
 
-        public GroupPost PostInGroup(GroupPost gp)
+        public GroupPost PostInGroup(GroupPost gp, Group g)
         {
-            for (int i = 0; i < gp.Members.Length; i++)
+            for (int i = 0; i < g.Members.Length; i++)
             {
-                if (this.Username != gp.Members[i].Username)
-                    Console.WriteLine("Can't post in this group, you're not a member.");
-                else
+                if (this.Username == g.Members[i].Username)
                     return gp;
+                else
+                    Console.WriteLine("Can't post in this group, you're not a member.");
             }
             return gp;
         }

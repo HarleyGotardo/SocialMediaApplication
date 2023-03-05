@@ -6,25 +6,23 @@ using System.Threading.Tasks;
 
 namespace SocialMediaApplicationFacebook
 {
-    public class GroupPost : Group
+    public class GroupPost : Post
     {
+        public UserProfile Author { get; private set; }
         public Group Group { get; set; }
-        public string PostContent { get; set; }
-        public PostMessageType PostType { get; set; }
-        public string PostTitle { get; set; }
-
-        public GroupPost(string groupName, string description, int totalNumberOfMembers, UserProfile owner, UserProfile[] members, Group group, string postContent, PostMessageType postType, string postTitle) : base(groupName, description, totalNumberOfMembers, owner, members)
-        {
+        public string Datetime { get; private set; }
+        public GroupPost(PostMessageType postType, string title, string postContent, string description, UserProfile author, Group group, string dateTime) : base(postType, title, postContent, description) 
+        { 
+            this.Author = author;
             this.Group = group;
-            this.PostContent = postContent;
-            this.PostType = postType;
-            this.PostTitle = postTitle;
+            this.Datetime = dateTime;
         }
 
         public override string ToString()
         {
-            return "\nGroup: " + Group.GroupName + "\n" 
-                + "Post Title: " + this.PostTitle + "\n"
+            return "Author: " + this.Author + "\n"
+                + "Group: " + this.Group + "\n" 
+                + "Post Title: " + this.Title + "\n"
                 + "PostType: " + this.PostType + "\n"
                 + "Post Content: " + this.PostContent;
         }

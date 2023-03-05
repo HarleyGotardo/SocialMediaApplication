@@ -8,19 +8,24 @@ using System.Threading.Tasks;
 
 namespace SocialMediaApplicationFacebook
 {
-    public class UserProfilePost : UserProfile
+    public class UserProfilePost : Post
     {
-        public UserProfile PostAuthor { get; private set; }
-        public string PostContent { get; set; }
-        public PostMessageType PostType { get; set; }
-        public string PostTitle { get; set; }
+        public UserProfile UserAuthor { get; private set; }
+        public string DateAndTimeOfThePost { get; private set; }
 
-        public UserProfilePost(string username, string password, string firstName, string lastName, string email, int age, string profileBirthDate, string status, string bio, string address, int numberOfFriends, UserProfile postAuthor, string postContent, PostMessageType postType, string postTitle, ProfileStatus profileStatus) : base(username, password, firstName, lastName, email, age, profileBirthDate, status, bio, address, numberOfFriends, profileStatus)
+        public UserProfilePost(UserProfile userAuthor, string dateAndTimeOfThePost, PostMessageType postType, string title, string postContent, string description) : base(postType, title, postContent, description)
         {
-            this.PostAuthor = postAuthor;
-            this.PostContent = postContent;
-            this.PostType = postType;
-            this.PostTitle = postTitle;
+            this.UserAuthor = userAuthor;
+            this.DateAndTimeOfThePost = dateAndTimeOfThePost;
+        }
+
+        public override string ToString()
+        {
+            return "\nAuthor: " + this.UserAuthor + "\n"
+                + "Post Title: " + this.Title + "\n"
+                + "PostType: " + this.PostType + "\n"
+                + "Post Content: " + this.PostContent + "\n"
+                + "Date and Time: " + this.DateAndTimeOfThePost;
         }
     }
 }
