@@ -40,26 +40,22 @@ namespace SocialMediaApplicationFacebook
 
         public GroupMessage GroupMessage(Group g, GroupMessage gm) 
         {
-            for(int i=0; i<g.Members.Length; i++)
+            int i = 0;
+            while (this.Username != g.Members[i].Username)
             {
-                if (this.Username == g.Members[i].Username)
-                    return gm;
-                else
-                    Console.WriteLine("Can't Message this group, you're not a member.");              
+                i++;
             }
             return gm;
         }
 
         public SendGroupChatMessage MessageGroupChat(GroupChat g, SendGroupChatMessage s)
         {
-            for (int i = 0; i < g.GroupChatMembers.Length; i++)
+            int i = 0;
+            while(this.Username != g.GroupChatMembers[i].Username)
             {
-                if (this.Username == g.GroupChatMembers[i].Username)
-                    return s;
-                else
-                    Console.WriteLine("Can't Message.You're not a member.");
+                i++;
             }
-            return s; 
+            return s;
         }
 
         public UserProfilePost PostSomething(UserProfilePost post) 
@@ -69,12 +65,10 @@ namespace SocialMediaApplicationFacebook
 
         public GroupPost PostInGroup(GroupPost gp, Group g)
         {
-            for (int i = 0; i < g.Members.Length; i++)
+            int i = 0;
+            while (this.Username != g.Members[i].Username)
             {
-                if (this.Username == g.Members[i].Username)
-                    return gp;
-                else
-                    Console.WriteLine("Can't post in this group, you're not a member.");
+                i++;
             }
             return gp;
         }
