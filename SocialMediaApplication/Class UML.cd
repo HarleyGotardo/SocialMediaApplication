@@ -1,112 +1,158 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="SocialMediaApplicationFacebook.Account" Collapsed="true">
-    <Position X="15.25" Y="5.5" Width="1.5" />
+  <Class Name="SocialMediaApplicationFacebook.Account">
+    <Position X="17.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>Account.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SocialMediaApplicationFacebook.Group" Collapsed="true">
-    <Position X="17.75" Y="2.5" Width="1.5" />
+  <Class Name="SocialMediaApplicationFacebook.Group">
+    <Position X="4" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAACAAAAgAAAEAAAAAAAACAAAAAAAAAAEIAAAAAE=</HashCode>
       <FileName>Group.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Owner" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Members" />
+    </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="SocialMediaApplicationFacebook.GroupChat" Collapsed="true">
-    <Position X="10.25" Y="8.5" Width="1.5" />
+  <Class Name="SocialMediaApplicationFacebook.GroupChat">
+    <Position X="14" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAAAAAAAAAAAAAEAAAAAAAAAAACAAAAAAAAAAACAAA=</HashCode>
       <FileName>GroupChat.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="GroupChatMembers" />
+    </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="SocialMediaApplicationFacebook.GroupMessage" Collapsed="true">
-    <Position X="10.25" Y="6.75" Width="1.5" />
+  <Class Name="SocialMediaApplicationFacebook.GroupMessage">
+    <Position X="5.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GroupMessage.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ReceiverGroup" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="SocialMediaApplicationFacebook.GroupPost" Collapsed="true">
+  <Class Name="SocialMediaApplicationFacebook.GroupPost">
     <Position X="10.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAAAAAAEgAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
       <FileName>GroupPost.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Author" />
+      <Property Name="Group" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="SocialMediaApplicationFacebook.Message" Collapsed="true">
-    <Position X="11.5" Y="5.5" Width="1.5" />
+  <Class Name="SocialMediaApplicationFacebook.Message">
+    <Position X="7" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAABAIAEAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Message.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Sender" />
+      <Property Name="MessageType" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="SocialMediaApplicationFacebook.Page" Collapsed="true">
-    <Position X="19.5" Y="2.5" Width="1.5" />
+  <Class Name="SocialMediaApplicationFacebook.Page">
+    <Position X="12.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAARAAAAAAEEAAACASAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Page.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Admin" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="SocialMediaApplicationFacebook.PagePost" Collapsed="true">
+  <Class Name="SocialMediaApplicationFacebook.PagePost">
     <Position X="12.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAQAAAEAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
       <FileName>PagePost.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Page" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="SocialMediaApplicationFacebook.Post" Collapsed="true">
-    <Position X="12.75" Y="2.5" Width="1.5" />
+  <Class Name="SocialMediaApplicationFacebook.Post">
+    <Position X="12.25" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAEAAAEAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
       <FileName>Post.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PostType" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="SocialMediaApplicationFacebook.PrivateMessage" Collapsed="true">
-    <Position X="12.5" Y="6.75" Width="1.5" />
+  <Class Name="SocialMediaApplicationFacebook.PrivateMessage">
+    <Position X="8.25" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PrivateMessage.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Receiver" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="SocialMediaApplicationFacebook.SendGroupChatMessage" Collapsed="true">
-    <Position X="10.25" Y="9.75" Width="1.5" />
+  <Class Name="SocialMediaApplicationFacebook.SendGroupChatMessage">
+    <Position X="11.25" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAABAIAEAAAEAAAAIAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>SendGroupChatMessage.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GroupChat" />
+      <Property Name="Sender" />
+      <Property Name="MessageType" />
+    </ShowAsAssociation>
   </Class>
-  <Class Name="SocialMediaApplicationFacebook.UserProfile" Collapsed="true">
-    <Position X="15.25" Y="6.75" Width="1.5" />
+  <Class Name="SocialMediaApplicationFacebook.UserProfile">
+    <Position X="17.5" Y="9.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAMAEAkACAAAAAECEABAAAAAAAAAQACAAAAAAIAFAg=</HashCode>
+      <HashCode>AAAMAEAkBCAAAAAECEABAAAAAAAAAQACAAAAAAIAFAg=</HashCode>
       <FileName>UserProfile.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProfileStatus" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Friends" />
+    </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="SocialMediaApplicationFacebook.UserProfilePost" Collapsed="true">
+  <Class Name="SocialMediaApplicationFacebook.UserProfilePost">
     <Position X="15" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAAAAAAAAEAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
       <FileName>UserProfilePost.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UserAuthor" />
+    </ShowAsAssociation>
   </Class>
-  <Enum Name="SocialMediaApplicationFacebook.PageCategory" Collapsed="true">
-    <Position X="17.75" Y="3.75" Width="1.5" />
+  <Enum Name="SocialMediaApplicationFacebook.PageCategory">
+    <Position X="6" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEABAEAAEAAAAAAAAAAAAAAAAAAAIAAAAAgAAAAAAA=</HashCode>
       <FileName>PageCategory.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="SocialMediaApplicationFacebook.PostMessageType" Collapsed="true">
-    <Position X="19.5" Y="3.75" Width="1.5" />
+  <Enum Name="SocialMediaApplicationFacebook.PostMessageType">
+    <Position X="1.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAACAAAAAAACAAAAAAAAAAAAAACAAAAAg=</HashCode>
       <FileName>PostMessageType.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="SocialMediaApplicationFacebook.ProfileStatus" Collapsed="true">
-    <Position X="17.75" Y="4.5" Width="1.5" />
+  <Enum Name="SocialMediaApplicationFacebook.ProfileStatus">
+    <Position X="8" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAgABAAAAAAIAAgAEAAAAAAAAAAAQAAIAYAACAA=</HashCode>
       <FileName>ProfileStatus.cs</FileName>
